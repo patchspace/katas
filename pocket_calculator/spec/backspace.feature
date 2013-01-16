@@ -63,6 +63,10 @@ Feature: Backspace
     When I press "1 2 3 +- > > >"
     Then the display shows "0."
 
+  Scenario: Remove a negative zero and replace with a positive number
+    When I press ". 0 +- > > 1 2 3"
+    Then the display shows "123."
+
   @negative
   Scenario: Make an edited zero negative
     If a zero falls in a forest?
