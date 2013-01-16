@@ -15,16 +15,18 @@ Some are features are simpler than others, and some can be split up. Some depend
 * Pocket calculator (turn on)
 * Entering integers
 * Integer maths
+* Entering negative integers
 * Clear
 * Changing operation
 * Memory
 * Entering decimals
 * Decimal maths
+* Entering negative decimals
 * Backspace
 
 A more masochistic way to start the kata would be to do as much of the entering and editing, including backspace, first. After this though, the rest should be easy.
 
-I've tagged the examples to give an indication of which features you need for each, where there are cross-cutting concerns (eg decimals).
+I've tagged the examples to give an indication of which features you need for each, where there are cross-cutting concerns (eg decimals). These aren't exact though - let me know if you find any interesting dependencies I missed.
 
 ## Contact
 

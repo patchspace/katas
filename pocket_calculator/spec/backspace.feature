@@ -63,6 +63,13 @@ Feature: Backspace
     When I press "1 2 3 +- > > >"
     Then the display shows "0."
 
+  @negative
+  Scenario: Make an edited zero negative
+    If a zero falls in a forest?
+
+    When I press "> +-"
+    Then the display shows "-0."
+
   Scenario: Performing a calculation after editing the last number
     Calculates 123 + 45
 
