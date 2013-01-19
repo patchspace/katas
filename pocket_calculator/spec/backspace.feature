@@ -64,24 +64,24 @@ Feature: Backspace
 
   @negative
   Scenario: Edit a negative number
-    When I press "1 2 3 +- >"
+    When I press "1 2 3 +/- >"
     Then the display shows "-12."
 
   Scenario: Remove a negative number entirely
     It's like that negative number never existed
 
-    When I press "1 2 3 +- > > >"
+    When I press "1 2 3 +/- > > >"
     Then the display shows "0."
 
   Scenario: Remove a negative zero and replace with a positive number
-    When I press ". 0 +- > > 1 2 3"
+    When I press ". 0 +/- > > 1 2 3"
     Then the display shows "123."
 
   @negative
   Scenario: Make an edited zero negative
     If a zero falls in a forest?
 
-    When I press "> +-"
+    When I press "> +/-"
     Then the display shows "-0."
 
   Scenario: Performing a calculation after editing the last number

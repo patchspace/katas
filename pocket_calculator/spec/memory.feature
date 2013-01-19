@@ -83,30 +83,30 @@ Feature: Memory
     When I press "MR"
     Then the display shows "210."
 
-  # Memory recall and +-
+  # Memory recall and +/-
 
   Scenario: Memory recalling an empty memory
     Recalling an empty memory doesn't let you toggle the sign
 
-    When I press "MR +-"
+    When I press "MR +/-"
     Then the display shows "0."
 
   @negative
   Scenario: Memory recalling a non-zero value
     Recalling a non-zero memory lets you toggle the sign
 
-    When I press "1 2 3 M+ AC MR +-"
+    When I press "1 2 3 M+ AC MR +/-"
     Then the display shows "-123."
 
   Scenario: Trying to recall zero to make negative zero
     You can't really store zero
 
-    When I press "0 M+ AC MR +-"
+    When I press "0 M+ AC MR +/-"
     Then the display shows "0."
 
   Scenario: Trying to build up and recall zero to make negative zero
     You can't trick the calculator into storing zero
 
-    When I press "1 2 3 M+ 1 0 0 M- 2 3 M- AC MR +-"
+    When I press "1 2 3 M+ 1 0 0 M- 2 3 M- AC MR +/-"
     Then the display shows "0."
 

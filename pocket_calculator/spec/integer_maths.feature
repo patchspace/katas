@@ -68,23 +68,23 @@ Feature: Integer maths
   # Negative numbers
 
   Scenario: Adding a negative number to a positive one
-    When I press "1 2 3 + 6 7 +- ="
+    When I press "1 2 3 + 6 7 +/- ="
     Then the display shows "56."
 
   Scenario: Negating zero
-    Pressing +- doesn't add a minus sign if you haven't entered anything
+    Pressing +/- doesn't add a minus sign if you haven't entered anything
 
-    When I press "+-"
+    When I press "+/-"
     Then the display shows "0."
 
-  Scenario: Pressing "+-" after an operator, but before the next number
-    The calculator will negate the number on the display if you press +-
+  Scenario: Pressing "+/-" after an operator, but before the next number
+    The calculator will negate the number on the display if you press +/-
     after an operator, but this doesn't actually change the number you
     entered. It just lets you see what it would look like if it was
     negative. The next number you enter will be interpreted as positive.
     We don't want to let this feature go undocumented.
 
-    When I press "1 2 3 + +-"
+    When I press "1 2 3 + +/-"
     Then the display shows "-123."
     When I press "7"
     Then the display shows "7."
