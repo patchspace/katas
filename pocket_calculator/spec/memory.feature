@@ -8,12 +8,14 @@ Feature: Memory
 
   # Memory add
 
+  @memory
   Scenario: Adding one number
     When I press "1 2 3 M+"
     Then the display shows "123."
     When I press "AC MR"
     Then the display shows "123."
 
+  @memory
   Scenario: Adding two numbers
     When I press "1 2 3 M+ 4 5 6 M+"
     Then the display shows "456."
@@ -22,6 +24,7 @@ Feature: Memory
 
   # Memory subtract
 
+  @memory
   Scenario: Subtracting one number
     We assume we already have M+, otherwise we'd need
     to use a negative number to test this.
@@ -33,6 +36,7 @@ Feature: Memory
     When I press "MR"
     Then the display shows "877."
 
+  @memory
   Scenario: Subtracting one number
     We assume we already have M+, otherwise we'd need
     to use a negative number to test this.
@@ -46,6 +50,7 @@ Feature: Memory
 
   # Combined add and subtract
 
+  @memory
   Scenario: Adding then subtracting the same amount
     When I press "1 0 0 0 M+ AC"
     When I press "1 2 3 M+ 1 2 3 M-"
@@ -55,6 +60,7 @@ Feature: Memory
 
   # Mid-calculation
 
+  @memory
   Scenario: Adding to the memory mid-calculation
     If you press M+ while you're half-way through a calculation,
     the calculator will complete the current calculation and add
@@ -66,6 +72,7 @@ Feature: Memory
     When I press "MR"
     Then the display shows "1368."
 
+  @memory
   Scenario: Subtracting from the memory mid-calculation
     This works similarly to the scenario above, except that
     the calculation in progress is subtracted rather than
