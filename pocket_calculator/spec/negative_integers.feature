@@ -45,6 +45,15 @@ Feature: Entering negative integers
       | *        |
       | /        |
 
+  @negative
+  Scenario: Pressing +- after =
+    When I press "1 2 3 = +-"
+    Then the display shows "-123."
+
+  Scenario: Pressing +- after = where the number is zero
+    When I press "0 = +-"
+    Then the display shows "0."
+
   Scenario: Negative nothing
     Pressing +- doesn't change the display if you haven't
     started entering a number yet.

@@ -52,6 +52,16 @@ Feature: Backspace
     When I press "1 2 3 . > 9"
     Then the display shows "129."
 
+  Scenario: Why was "." the first character we pressed?
+    Is that zero really there?
+
+    When I press ". 0 > > 1 2 3"
+    Then the display shows "123."
+
+  Scenario: Maybe we wanted to press "." after all
+    When I press ". > . 1 2 3"
+    Then the display shows "0.123"
+
   @negative
   Scenario: Edit a negative number
     When I press "1 2 3 +- >"
