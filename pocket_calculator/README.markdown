@@ -1,12 +1,18 @@
 # Pocket Calculator Kata
 
-The aim of this kata is to implement (most of) the features of the [Casio SL-1100TV][calculator] 10-digit calculator with "stylish & cool design". There aren't too many features, but there are many traps in the edge cases.
+The aim of this kata is to implement (most of) the features of the [Casio SL-1100TV][calculator] 10-digit calculator with "stylish & cool design". There aren't too many features, but there are many traps for the unwary.
 
 The UI for the calculator is the keyboard - your implementation must respond to button presses - and the display - your implementation must update a display. All test cases are expressed as a sequence of button presses and an expected display state. You must recreate the display _exactly_, and this makes some of the features much harder to get right.
 
-This kata involves very little maths. The challenge is in simulating the internals of the calculator in a sane way while recreating the behaviour exactly. You should aim to have as little duplication of logic as possible.
+This kata involves very little maths. The challenge is in simulating the internals of the calculator in as sane a way as possible while recreating the behaviour exactly. You should aim to:
+
+* name any components you design in a self-explanatory way
+* have as little duplication as is reasonable
+* keep any conditional logic as simple as possible
 
 The tests are all provided in the Gherkin syntax used by [Cucumber][cucumber], [SpecFlow][specflow], etc. You may write your solution in any language and test framework you like. Feel free to translate the examples to NUnit, RSpec, Python's unittest, or anything else you prefer. The examples are very simple.
+
+If you'd like to have one of the calculators handy, you can get them from [Amazon][amazon] for not much money. Some colours are cheaper than others. I had more than one WTF?! moment designing this kata, and it can be entertaining to see how a real device works.
 
 ## Order hints
 
@@ -36,5 +42,6 @@ This kata was designed by [Ash Moran][ashmoran] of [PatchSpace Ltd][patchspace].
 [calculator]: http://www.casio.co.uk/products/calculators/pocket-calculators/Product/SL-1100TV-BU-S-EH/
 [cucumber]: http://cukes.info/
 [specflow]: http://www.specflow.org/specflownew/
+[amazon]: http://www.amazon.co.uk/gp/product/B0014S9YZO/
 [ashmoran]: http://www.linkedin.com/in/ashmoran
 [patchspace]: http://www.patchspace.co.uk/
