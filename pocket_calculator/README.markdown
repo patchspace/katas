@@ -15,6 +15,7 @@ Some are features are simpler than others, and some can be split up. Some depend
 * Pocket calculator (turn on)
 * Entering integers
 * Integer maths
+* Square root
 * Entering negative integers
 * Clear
 * Changing operation
