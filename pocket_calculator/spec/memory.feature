@@ -37,16 +37,13 @@ Feature: Memory
     Then the display shows "877."
 
   @memory
-  Scenario: Subtracting one number
-    We assume we already have M+, otherwise we'd need
-    to use a negative number to test this.
-
+  Scenario: Subtracting two numbers
     When I press "1 0 0 0 M+ AC"
     Then the display shows "0."
-    When I press "1 2 3 M-"
-    Then the display shows "123."
+    When I press "1 2 3 M- 4 5 6 M-"
+    Then the display shows "456."
     When I press "MR"
-    Then the display shows "877."
+    Then the display shows "421."
 
   # Combined add and subtract
 
